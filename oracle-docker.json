@@ -1,0 +1,17 @@
+{
+    "connector.class" : "io.debezium.connector.oracle.OracleConnector",
+    "tasks.max" : "1",
+    "topic.prefix" : "server1",
+    "database.hostname" : "ORACLE",
+    "database.port" : "1521",
+    "database.user" : "c##dbzuser",
+    "database.password" : "oracle",
+    "database.dbname" : "ORCLCDB",
+    "database.pdb.name" : "ORCLPDB1",
+    "schema.history.internal.kafka.bootstrap.servers" : "kafka:9092",
+    "schema.history.internal.kafka.topic": "schema-changes.inventory",
+    "database.connection.adapter": "olr",
+    "openlogreplicator.source": "ORACLE",
+    "openlogreplicator.host": "<ip address or hostname of OpenLogReplicator>",
+    "openlogreplicator.port": "<port OpenLogReplicator is listening on>"
+}
