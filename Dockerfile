@@ -7,6 +7,13 @@ ENV KAFKA_CONNECT_ES_DIR=$PLUGIN_DIR/kafka-connect-elasticsearch
 ENV KAFKA_CONNECT_SPOOLDIR_DIR=$PLUGIN_DIR/kafka-connect-spooldir
 ENV KAFKA_CONNECT_JDBC_SOURCE_DIR=$PLUGIN_DIR/kafka-connect-jdbc-source
 
+ENV KAFKA_CONNECT_MONGODB_DIR=$PLUGIN_DIR/kafka-connect-mongodb
+RUN mkdir -p $KAFKA_CONNECT_MONGODB_DIR
+
+# MongoDB Kafka Connector (Sink)
+RUN curl -L https://repo1.maven.org/maven2/org/mongodb/kafka/mongo-kafka-connect/1.11.1/mongo-kafka-connect-1.11.1-all.jar \
+    -o $KAFKA_CONNECT_MONGODB_DIR/mongo-kafka-connect.jar
+    
 # Create the plugin directory if it doesn't exist
 RUN mkdir -p $PLUGIN_DIR
 

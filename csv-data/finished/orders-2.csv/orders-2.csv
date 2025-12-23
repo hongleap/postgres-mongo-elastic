@@ -1,0 +1,101 @@
+order_id,customer_id,order_total_usd,make,model,delivery_city,delivery_company,delivery_address
+1,535,190899.73,Dodge,Ram Wagon B350,Sheffield,DuBuque LLC,2810 Northland Avenue
+2,671,33245.53,Volkswagen,Cabriolet,Edinburgh,Bechtelar-VonRueden,1 Macpherson Crossing
+3,695,155664.90,Toyota,Avalon,Brighton,"Jacobs, Ebert and Dooley",4 Loomis Crossing
+4,366,149012.91,Hyundai,Santa Fe,Leeds,Kiehn Group,538 Burning Wood Alley
+5,175,63274.18,Kia,Sportage,Leeds,Miller-Hudson,6 Kennedy Court
+6,37,97790.04,BMW,3 Series,Bristol,Price Group,21611 Morning Trail
+7,644,76240.84,Mazda,MPV,Leeds,Kihn and Sons,9 Susan Street
+8,973,216233.98,Hyundai,Elantra,Sheffield,"Feeney, Howe and Koss",07671 Hazelcrest Terrace
+9,463,162589.10,Chrysler,Grand Voyager,York,"Fay, Murazik and Schumm",42080 Pawling Circle
+10,863,111208.24,Ford,Laser,Leeds,"Boehm, Mohr and Doyle",0919 International Trail
+11,631,115753.95,Kia,Sorento,Leeds,"Herzog, Towne and Toy",08 Declaration Park
+12,922,162480.39,GMC,Yukon XL 1500,Leeds,Hammes-Kuhlman,5 West Park
+13,704,136123.75,Audi,TT,Bristol,Witting-Daniel,9696 Katie Point
+14,666,49901.72,Saturn,S-Series,London,Hickle-Cummerata,54140 Northport Point
+15,683,193888.24,Toyota,Prius,Leeds,"Monahan, Johns and Schiller",4706 Dorton Hill
+16,708,15363.86,Toyota,Prius,Leeds,Abernathy Inc,391 Washington Pass
+17,359,107546.23,Jaguar,XJ Series,Sheffield,West-Fritsch,876 Petterle Lane
+18,339,105038.49,Ford,Windstar,London,"Watsica, Quigley and Smith",572 Bartelt Place
+19,58,97888.57,Buick,Century,Brighton,Crona-Volkman,12 Golf Course Street
+20,111,116873.53,Ford,F250,Swindon,Kuhic-Homenick,614 Elmside Terrace
+21,811,140427.90,Chevrolet,Astro,York,Beer-Baumbach,3 Menomonie Alley
+22,687,199641.90,Volvo,S90,London,Tremblay-Lesch,3301 Surrey Drive
+23,560,47245.21,Audi,S4,Brighton,Nienow-Wehner,1 Golf Hill
+24,355,196834.38,Volvo,C70,Sheffield,"Kerluke, Cole and Rippin",5 Pennsylvania Place
+25,243,193988.10,Mitsubishi,Lancer Evolution,York,"Thiel, Tremblay and Moore",62 Dwight Trail
+26,358,149144.17,Jaguar,X-Type,Bristol,Langworth-Beier,43 Kropf Street
+27,542,206976.61,Chevrolet,Cruze,Sheffield,"Durgan, Kassulke and Conroy",04 Waxwing Point
+28,64,31888.16,Mitsubishi,Lancer Evolution,Exeter,Gulgowski-D'Amore,1907 Lien Trail
+29,489,46642.65,GMC,Rally Wagon 1500,London,"Considine, Koss and Schamberger",329 Coolidge Circle
+30,719,91181.23,Dodge,Viper,York,Ryan-Heathcote,429 Fallview Drive
+31,112,171573.80,Scion,tC,Sheffield,"Friesen, Klocko and Rolfson",70 Chinook Place
+32,494,162390.66,BMW,7 Series,Sheffield,"Wehner, Boyer and Cassin",08 Prairieview Trail
+33,289,188612.64,Isuzu,Rodeo,London,"Bruen, Gutkowski and Runolfsdottir",2 Nelson Crossing
+34,388,213200.06,Ford,F350,London,Johnston-McLaughlin,491 Cascade Way
+35,996,51999.59,BMW,M Roadster,London,"Kihn, Stiedemann and Ryan",419 Daystar Terrace
+36,873,201259.04,Ford,Windstar,Leeds,Johnston and Sons,54654 Farmco Alley
+37,940,107280.40,Chrysler,Sebring,London,O'Kon-Dickinson,23 Calypso Park
+38,28,141623.67,Toyota,Previa,Leeds,Hoeger-Rippin,698 Londonderry Park
+39,588,61361.95,Cadillac,Eldorado,York,Kautzer Inc,58 Garrison Hill
+40,972,186034.71,Subaru,Forester,London,Emmerich Group,83715 Jana Park
+41,275,148871.77,Pontiac,Vibe,Brighton,Langosh-Dach,8 Vidon Plaza
+42,421,33476.50,Toyota,RAV4,York,"Ankunding, Konopelski and Mayert",03893 Victoria Pass
+43,560,95556.13,Cadillac,DeVille,York,Collins-Labadie,74 Monument Road
+44,240,16979.73,Chevrolet,Blazer,London,Medhurst-Gleichner,2139 Dottie Trail
+45,123,111166.44,Porsche,911,London,Beahan Group,578 Mayfield Alley
+46,719,151117.72,Acura,NSX,York,Feeney Group,8479 American Ash Circle
+47,415,143826.05,GMC,3500,York,Pagac-Boyer,0 Hintze Pass
+48,744,12368.78,Audi,100,Leeds,Dietrich and Sons,60 Eagan Hill
+49,486,203625.12,Toyota,Highlander,London,Johns-Cummerata,1 Spohn Point
+50,866,162201.82,Mitsubishi,Truck,Swindon,"Mills, Ziemann and Watsica",775 Prairie Rose Point
+51,578,217634.03,Honda,CR-V,London,Jerde Group,23040 American Ash Lane
+52,627,98231.21,Lotus,Evora,Exeter,McKenzie and Sons,36352 Mallard Drive
+53,923,81959.45,Lotus,Esprit,Sheffield,Jast-Hegmann,050 Mariners Cove Circle
+54,817,208809.93,Dodge,Ram 2500 Club,London,"Jaskolski, Gutmann and Gerlach",76 Stone Corner Circle
+55,382,110757.12,Mercury,Mystique,Leeds,Ortiz-Wiegand,8 Loomis Court
+56,70,145858.18,Oldsmobile,Alero,Swindon,Funk and Sons,206 Hovde Road
+57,701,109840.78,Mitsubishi,Pajero,Leeds,"Rath, Hirthe and Wilderman",9 Everett Center
+58,541,159223.36,BMW,X3,London,Powlowski Group,055 Gale Center
+59,185,39931.57,Ford,E250,Sheffield,McDermott Group,91864 Northwestern Pass
+60,851,193488.39,Mercedes-Benz,S-Class,London,Shanahan LLC,8126 Bluestem Court
+61,349,150274.92,Lexus,RX,York,"Wilkinson, Borer and Weissnat",391 Waubesa Center
+62,580,45462.58,Land Rover,LR3,Leeds,Krajcik-Dach,47626 Declaration Street
+63,457,55272.91,Ford,Mustang,York,Skiles Inc,5 Portage Drive
+64,3,69836.45,Infiniti,QX,Leeds,Bradtke and Sons,2275 Arrowood Point
+65,364,148963.99,Ford,Bronco II,York,"Funk, Waters and Welch",68 Mandrake Center
+66,268,179623.29,Chrysler,LeBaron,Leeds,"Predovic, Hermiston and Wilkinson",31 Becker Lane
+67,273,156845.90,Mercury,Cougar,London,"Rowe, Roberts and Bradtke",1 Forest Court
+68,529,41892.21,Mazda,MPV,York,"Langosh, Volkman and Pfannerstill",4 Rutledge Street
+69,279,77842.37,Mazda,929,Sheffield,Abshire-Cormier,45 Sundown Trail
+70,178,12981.51,Hummer,H2,Sheffield,Gaylord and Sons,43 Kennedy Circle
+71,471,86688.10,Chevrolet,Corvette,Sheffield,Weissnat Inc,13 Miller Alley
+72,639,107038.70,Pontiac,Firefly,Sheffield,"Dietrich, Moen and Howe",8 Stang Pass
+73,212,184263.83,Toyota,Matrix,London,Grady and Sons,2 Hermina Terrace
+74,48,58498.38,Volvo,C70,London,"Hilpert, Kautzer and Balistreri",768 Reindahl Center
+75,642,173389.51,Oldsmobile,Ciera,Leeds,Fahey LLC,47 Pond Point
+76,430,164862.22,Hummer,H2 SUT,Leeds,Heller-Senger,0 Truax Place
+77,729,147742.06,Buick,LeSabre,Leeds,Trantow Inc,79336 Manley Place
+78,760,191636.50,Toyota,Sienna,Edinburgh,"Monahan, Fadel and Dickinson",39 Hayes Park
+79,276,124279.67,Buick,LeSabre,London,Weissnat and Sons,3 Petterle Lane
+80,730,205484.89,Oldsmobile,88,Leeds,"Yost, Huel and Jones",9609 Fisk Alley
+81,713,180118.91,Chrysler,Grand Voyager,London,Pagac-O'Kon,20376 Sachs Junction
+82,853,124580.01,Mercedes-Benz,SL-Class,Bath,"Schuppe, Medhurst and Greenholt",52768 Ruskin Circle
+83,7,172596.45,Chrysler,Sebring,London,Kunde-Kohler,8151 Eagan Drive
+84,692,177761.44,Ford,F350,Leeds,"Crooks, Hessel and Bashirian",0 Cambridge Hill
+85,646,110672.29,Honda,Ridgeline,York,Murazik-Kuhlman,70345 Loftsgordon Pass
+86,803,10982.16,Porsche,Boxster,Bradford,Medhurst-Feest,15591 Artisan Avenue
+87,638,66810.82,Audi,RS 4,Bristol,Johns Inc,53768 Northwestern Court
+88,705,204995.62,Pontiac,Trans Sport,Sheffield,Botsford-Paucek,3766 John Wall Place
+89,768,60927.46,Volkswagen,Jetta,Leeds,O'Connell Inc,58268 Fallview Alley
+90,136,21121.30,Mitsubishi,Mighty Max Macro,London,Leannon-Schuster,10735 Ridgeway Road
+91,7,142117.12,Honda,Civic,Sheffield,Wolff-Schoen,9 Manufacturers Lane
+92,693,197866.28,Mercury,Mountaineer,Edinburgh,Rath-Dickens,0111 Lien Alley
+93,516,168045.47,Chevrolet,Traverse,London,Farrell-Douglas,10 Hoffman Terrace
+94,404,210451.97,Acura,TSX,York,"Beahan, Armstrong and Robel",3 Cardinal Drive
+95,648,118991.13,GMC,Suburban 2500,Bath,"Abbott, Effertz and Herzog",28 Farwell Lane
+96,303,51529.56,Volkswagen,rio,London,Grant-Brown,27 Stoughton Center
+97,833,186694.41,Mercury,Milan,Leeds,"Schaefer, Aufderhar and Witting",097 Spohn Drive
+98,720,24882.24,Porsche,Cayenne,Bradford,"Cartwright, Considine and Hansen",489 Nova Road
+99,229,123798.71,GMC,1500 Club Coupe,London,"Borer, Lockman and Jerde",2 Superior Pass
+100,963,106497.20,Infiniti,Q,London,Hayes LLC,8878 Bayside Street

@@ -1,0 +1,6 @@
+order_id,customer_id,order_total_usd,make,model,delivery_city,delivery_company,delivery_address
+1,535,190899.73,Dodge,Ram Wagon B350,Sheffield,DuBuque LLC,2810 Northland Avenue
+2,671,33245.53,Volkswagen,Cabriolet,Edinburgh,Bechtelar-VonRueden,1 Macpherson Crossing
+3,695,155664.90,Toyota,Avalon,Brighton,"Jacobs, Ebert and Dooley",4 Loomis Crossing
+4,366,149012.91,Hyundai,Santa Fe,Leeds,Kiehn Group,538 Burning Wood Alley
+5,175,63274.18,Kia,Sportage,Leeds,Miller-Hudson,6 Kennedy Court
