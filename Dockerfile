@@ -10,6 +10,16 @@ ENV KAFKA_CONNECT_JDBC_SOURCE_DIR=$PLUGIN_DIR/kafka-connect-jdbc-source
 ENV KAFKA_CONNECT_MONGODB_DIR=$PLUGIN_DIR/kafka-connect-mongodb
 RUN mkdir -p $KAFKA_CONNECT_MONGODB_DIR
 
+# Debezium Elasticsearch Connector
+ENV PLUGIN_PATH=/kafka/connect
+ENV ES_PLUGIN_PATH=${PLUGIN_PATH}/debezium-connect-elasticsearch
+
+RUN mkdir -p ${PLUGIN_PATH}
+
+# Create the Elasticsearch plugin directory
+RUN mkdir -p ${ES_PLUGIN_PATH}
+COPY ./confluentinc-kafka-connect-elasticsearch-15.1.0/lib/ ${ES_PLUGIN_PATH}
+
 # MongoDB Kafka Connector (Sink)
 RUN curl -L https://repo1.maven.org/maven2/org/mongodb/kafka/mongo-kafka-connect/1.11.1/mongo-kafka-connect-1.11.1-all.jar \
     -o $KAFKA_CONNECT_MONGODB_DIR/mongo-kafka-connect.jar

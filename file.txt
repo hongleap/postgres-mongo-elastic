@@ -1,0 +1,47 @@
+  # cdc-oracle:
+  #   image: container-registry.oracle.com/database/express:21.3.0-xe
+  #   container_name: cdc-oracle
+  #   shm_size: 4gb
+  #   ports:
+  #     - "1521:1521"
+  #   environment:
+  #     ORACLE_PWD: dbzpassword123
+  #     ORACLE_CHARACTERSET: AL32UTF8
+  #     ENABLE_ARCHIVELOG: "true"
+  #   volumes:
+  #     - ./init-scripts:/opt/oracle/scripts/startup # auto-run
+  #     - oracle_data_cdc:/opt/oracle/oradata
+  #     - oracle_fra_cdc:/opt/oracle/fast_recovery_area
+  #   networks:
+  #     - kafka-fullstack
+  #   deploy:
+  #     resources:
+  #       limits:
+  #         memory: 8G
+  #         cpus: '4.0'
+  #       reservations:
+  #         memory: 4G
+  #         cpus: '2.0'
+
+  # openlogreplicator:
+  #   image: bersler/openlogreplicator:debian-13.0-dev
+  #   container_name: openlogreplicator
+  #   restart: unless-stopped
+  #   user: "1000:1000"
+  #   command: >
+  #     /opt/OpenLogReplicator/OpenLogReplicator
+  #     --config /opt/OpenLogReplicator/scripts/OpenLogReplicator.json
+  #     --log-level info
+  #     --trace 3
+  #   ports:
+  #     - "9000:9000"
+  #   volumes:
+  #     - ./scripts:/opt/OpenLogReplicator/scripts:ro
+  #     - ./olr-checkpoint:/opt/OpenLogReplicator/checkpoint
+  #     - ./olr-log:/opt/OpenLogReplicator/log
+  #     - oracle_data_cdc:/opt/oracle/oradata:ro
+  #     - oracle_fra_cdc:/opt/oracle/fast_recovery_area:ro
+  #   depends_on:
+  #     - cdc-oracle
+  #   networks:
+  #     - kafka-fullstack

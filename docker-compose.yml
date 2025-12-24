@@ -1,50 +1,21 @@
+
 services:
-
-  cdc-oracle:
-    image: container-registry.oracle.com/database/express:21.3.0-xe
-    container_name: cdc-oracle
-    shm_size: 4gb
+  cdc-postgres:
+    image: postgres:16
+    container_name: cdc-postgres
     ports:
-      - "1521:1521"
+      - 5168:5432
     environment:
-      ORACLE_PWD: dbzpassword123
-      ORACLE_CHARACTERSET: AL32UTF8
-      ENABLE_ARCHIVELOG: "true"
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres_db
+    command:
+      - "postgres"
+      - "-c"
+      - "wal_level=logical"
     volumes:
-      - ./init-scripts:/opt/oracle/scripts/startup # auto-run
-      - oracle_data_cdc:/opt/oracle/oradata
-      - oracle_fra_cdc:/opt/oracle/fast_recovery_area
-    networks:
-      - kafka-fullstack
-    deploy:
-      resources:
-        limits:
-          memory: 8G
-          cpus: '4.0'
-        reservations:
-          memory: 4G
-          cpus: '2.0'
-
-  openlogreplicator:
-    image: bersler/openlogreplicator:debian-13.0-dev
-    container_name: openlogreplicator
-    restart: unless-stopped
-    user: "1000:1000"
-    command: >
-      /opt/OpenLogReplicator/OpenLogReplicator
-      --config /opt/OpenLogReplicator/scripts/OpenLogReplicator.json
-      --log-level info
-      --trace 3
-    ports:
-      - "9000:9000"
-    volumes:
-      - ./scripts:/opt/OpenLogReplicator/scripts:ro
-      - ./olr-checkpoint:/opt/OpenLogReplicator/checkpoint
-      - ./olr-log:/opt/OpenLogReplicator/log
-      - oracle_data_cdc:/opt/oracle/oradata:ro
-      - oracle_fra_cdc:/opt/oracle/fast_recovery_area:ro
-    depends_on:
-      -cdc-oracle
+      - ./psql/init.sql:/docker-entrypoint-initdb.d/postgres_init.sql
+      - pg_data_cdc:/var/lib/postgresql/data
     networks:
       - kafka-fullstack
 
@@ -62,20 +33,30 @@ services:
     networks:
       - kafka-fullstack  
 
-  cdc-postgres:
-    image: postgres:16
-    container_name: cdc-postgres
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.10.2
+    container_name: elasticsearch
     ports:
-      - 5168:5432
+      - 9999:9200
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-    command:
-      - "postgres"
-      - "-c"
-      - "wal_level=logical"
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - xpack.security.http.ssl.enabled=false
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
     volumes:
-      - pg_data_cdc:/var/lib/postgresql/data
+      - es-data:/usr/share/elasticsearch/data
+    networks:
+      - kafka-fullstack
+  kibana:
+    image: docker.elastic.co/kibana/kibana:9.1.8
+    container_name: kibana
+    ports:
+      - 5555:5601
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+      - XPACK_SECURITY_ENABLED=false
+    depends_on:
+      - elasticsearch
     networks:
       - kafka-fullstack
 
@@ -390,11 +371,12 @@ volumes:
   kafka_3_vol:
   kafka-ui-data:
   pg_data_cdc:
-  oracle_data_cdc:
-  oracle_fra_cdc:
   debezium_plugins:
   debezium_data:
   schema_registry_data:
+  mongodb_log:
+  mongo_data_cdc:
+  es-data:
 
 networks:
   kafka-fullstack:
